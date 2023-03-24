@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8">
+<title>Title</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<link href="fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+
+html, body, div, p, ul, ol, li, span, a, h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-family: 'Noto Sans KR', sans-serif; font-size:16px; font-weight: 300;}
+#mainvisual {min-height: 1500px; position:fixed; z-index:1; width: 100%; background:url("img/inc/bg.jpg") no-repeat center top;}
+.inner {width:1200px; margin:0px auto; text-align: center;}
+#mainvisual .inner {text-align: left;}
+#mainvisual .inner p {position: relative; left:-100px; top:120px;}
+.section {position: relative; z-index: 2;}
+.section h2 {font-size: 3.5em; font-weight: 900; word-spacing: -1px; letter-spacing: -1px; text-align: center; padding:60px 0px 15px 0px;}
+.section.no01 {min-height: 1000px;}
+.section.no02 {min-height: 1000px; background: #f0f0f0;}
+</style>
 </head>
 <body>
 
+<div id="mainvisual">
+<div class="inner">
+    <p data-aos="fade-up" data-aos-duration="1000"><img src="img/inc/maintext.png" /></p>
+</div>
+</div>
 
-테스트 ~
+<div class="section no01">
+
+</div>
+
+<div class="section no02">
+<div class="inner">
+    <h2>PORTFOLIO</h2>
+    <div class="portfolio">
+    </div>
+</div>
+</div>
+
+<script>
+AOS.init();
+
+let data = [
+    {
+        title : "자바캠핑카",
+        desc : "캠핑카 렌탈 프로그램",
+        techstack : "스프링 프레임워크 + MyBatis, MySQL, JSTL, HTML/CSS, JavaScript(JQuery)"
+    },
+    {
+        title : "자바카페",
+        desc : "카페 관리 프로그램",
+        techstack : "스프링 부트 + JPA, MariaDB, Thymeleaf, HTML/CSS, JavaScript(JQuery), Axios API"
+    }
+]
+let str = "";
+for(var i = 0; i<data.length; i++){
+    str += data[i].title+"<br />"
+}
+const portfolio = document.querySelector(".portfolio")
+portfolio.innerHTML = str
+
+</script>
+
 </body>
 </html>
