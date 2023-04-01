@@ -10,9 +10,14 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/5efc80fbcc.js" crossorigin="anonymous"></script>
+<script src="js/pofol.js"></script>
 <style>
 
 html, body, div, p, ul, ol, li, span, a, h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-family: 'Noto Sans KR', sans-serif; font-size:16px; font-weight: 300; list-style:none;}
+a:link {text-decoration:none;}
+a:active {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:visited {text-decoration:none;}
 #mainvisual {min-height: 1500px; position:fixed; z-index:1; width: 100%; background:url("img/inc/bg.jpg") no-repeat center top;}
 .inner {width:1200px; margin:0px auto; text-align: center;}
 #mainvisual .inner {text-align: left;}
@@ -20,7 +25,7 @@ html, body, div, p, ul, ol, li, span, a, h1, h2, h3, h4, h5, h6 {margin:0; paddi
 .section {position: relative; z-index: 2; padding:80px 0px 80px 0px;}
 .section h2 {font-size: 3.5em; font-weight: 900; word-spacing: -1px; letter-spacing: -1px; text-align: center; padding:0px 0px 15px 0px;}
 .section.no01 {min-height: 1000px;}
-.section.no02 {min-height: 1000px; background: #f0f0f0;}
+.section.no02 {min-height: 1000px; background: #dcdcdc;}
 .portfolio li {width:1200px; background:#ffffff; border-radius:8px; margin:60px 0px 0px 0px; padding:0px 0px 50px 0px;}
 .portfolio .img,
 .portfolio .desc {float:left;}
@@ -38,6 +43,12 @@ table td {border-color:#e6e6e6;}
 .spring {color:#559b27;}
 .java {color:#407397;}
 .jpa {color:#5a676d;}
+.querydsl {color:#0078c8;}
+.text p {padding:0px 0px 15px 0px; line-height:1.7em;}
+.quicklink {padding:30px 0px 0px 0px; margin:0; width:100%; display:block;}
+.quicklink a {display:block; background:#d8ff00; width:49%; padding:25px 0px 25px 0px; float:left; font-weight:bold; color:#000000; border-radius: 8px; text-align:center;}
+.quicklink a:nth-child(1) {margin-right:2%;}
+.quicklink a:nth-child(2) {background:#dcdcdc;}
 </style>
 </head>
 <body>
@@ -63,102 +74,49 @@ table td {border-color:#e6e6e6;}
 <script>
 AOS.init();
 
-let data = [
-    {
-        title : "자바 캠핑카",
-        subtitle : "캠핑카 렌탈 웹어플리케이션",
-        type : "팀 프로젝트 (리드)",
-        stake : "50% 이상",
-        date : "2023.01 ~ 2023.02 (6주)",
-        backend : "<span class='java'><i class='fa-solid fa-mug-hot'></i> Java</span>, <img src='img/pofol/icon_spring.gif' /> <span class='spring'>Spring</span>, MyBatis",
-        db : "MySQL",
-        frontend : "HTML/CSS, JSTL, JavaScript(JQuery)",
-        feature : "Calendar를 이용한 일정 예약, 일정 확인, 일정 취소, 정비소 검색, 대여회사 신청 등",
-        github : ""
-    },
-    {
-        title : "자바 캠핑카 관리자",
-        subtitle : "캠핑카 렌탈 관리자 웹어플리케이션",
-        type : "팀 프로젝트 (리드)",
-        stake : "50% 이상",
-        date : "2023.01 ~ 2023.02 (6주)",
-        backend : "<span class='java'><i class='fa-solid fa-mug-hot'></i> Java</span>, <img src='img/pofol/icon_spring.gif' /> <span class='spring'>Spring</span>, MyBatis",
-        db : "MySQL",
-        frontend : "HTML/CSS, JSTL, JavaScript(JQuery)",
-        feature : "Calendar를 이용한 일정 예약, 일정 확인, 일정 취소, 정비소 검색, 대여회사 신청 등",
-        github : ""
-    },
-    {
-        title : "자바 샵",
-        subtitle : "카페 관리 웹어플리케이션",
-        type : "팀 프로젝트 (리드)",
-        stake : "50% 이상",
-        date : "2023.01 ~ 2023.02 (6주)",
-        backend : "<span class='java'><i class='fa-solid fa-mug-hot'></i> Java</span>, <img src='img/pofol/icon_boot.gif' /> <span class='spring'>Spring Boot</span>, <img src='img/pofol/icon_jpa.gif' /> <span class='java'>JPA</span>",
-        db : "MySQL",
-        frontend : "HTML/CSS, JSTL, JavaScript(JQuery)",
-        feature : "Calendar를 이용한 일정 예약, 일정 확인, 일정 취소, 정비소 검색, 대여회사 신청 등",
-        github : ""
-        
-    },     
-    {
-        title : "자바 카페",
-        subtitle : "카페 관리 웹어플리케이션",
-        type : "팀 프로젝트 (리드)",
-        stake : "50% 이상",
-        date : "2023.01 ~ 2023.02 (6주)",
-        backend : "<span class='java'><i class='fa-solid fa-mug-hot'></i> Java</span>, <img src='img/pofol/icon_boot.gif' /> <span class='spring'>Spring Boot</span>, MyBatis",
-        db : "MySQL",
-        frontend : "HTML/CSS, JSTL, JavaScript(JQuery)",
-        feature : "Calendar를 이용한 일정 예약, 일정 확인, 일정 취소, 정비소 검색, 대여회사 신청 등",
-        github : ""
-        
-    }, 
-    {
-        title : "자바 호텔",
-        subtitle : "호텔 예약 웹어플리케이션",
-        type : "팀 프로젝트 (리드)",
-        stake : "50% 이상",
-        date : "2023.01 ~ 2023.02 (6주)",
-        backend : "<span class='java'><i class='fa-solid fa-mug-hot'></i> Java</span>, <img src='img/pofol/icon_spring.gif' /> <span class='spring'>Spring</span>, MyBatis",
-        db : "MySQL",
-        frontend : "HTML/CSS, JSTL, JavaScript(JQuery)",
-        feature : "Calendar를 이용한 일정 예약, 일정 확인, 일정 취소, 정비소 검색, 대여회사 신청 등",
-        github : ""
-        
-    }    
-]
+
 let str = "";
 for(var i = 0; i<data.length; i++){
 	imgno = i+1
 	str += ``
 	str += `<li>
-			<h3>${data[i].title}</h3>
-			<p class="subtitle">${data[i].subtitle}</p>
-			<div class="clearfix">
-				<div class="img"><img src="img/pofol/pofol0${imgno}_thumb.jpg" /></div>
-				<div class="desc">
-					<table class="table">
-					<colgroup>
-						<col width="150px" />
-						<col width="*" />
-					</colgroup>
-					<thead>
-						<tr class="table-light""><th>구분</th><th>내용</th></tr>
-					</thead>
-					<tbody>
-						<tr><th>프로젝트 구분</th><td>${data[i].type}</td></tr>
-						<tr><th>작업 기간</th><td>${data[i].date}</td></tr>
-						<tr><th>작업 지분</th><td>${data[i].stake}</td></tr>
-						<tr><th>백엔드</th><td class="backend">${data[i].backend}</td></tr>
-						<tr><th>데이터베이스</th><td>${data[i].db}</td></tr>
-						<tr><th>프론트엔드</th><td>${data[i].frontend}</td></tr>
-						<tr><th>주요 기능</th><td>${data[i].feature}</td></tr>
-					</tbody>
-					</table>
+		<h3>${data[i].title}</h3>
+		<p class="subtitle">${data[i].subtitle}</p>
+		<div class="clearfix">
+			<div class="img"><img src="img/pofol/pofol0${imgno}_thumb.jpg" /></div>
+			<div class="desc">
+				<table class="table">
+				<colgroup>
+					<col width="150px" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr class="table-light""><th>구분</th><th>내용</th></tr>
+				</thead>
+				<tbody>
+					<tr><th>프로젝트 구분</th><td>${data[i].type}</td></tr>
+	`
+	if(typeof data[i].stake != "undefined"){
+		str += `<tr><th>작업 지분</th><td>${data[i].stake}</td></tr>`
+	}
+	str += `
+					<tr><th>작업 기간</th><td>${data[i].date}</td></tr>
+					<tr><th>백엔드</th><td class="backend">${data[i].backend}</td></tr>
+					<tr><th>데이터베이스</th><td>${data[i].db}</td></tr>
+					<tr><th>프론트엔드</th><td>${data[i].frontend}</td></tr>
+					<tr><th>주요 기능</th><td>${data[i].feature}</td></tr>
+				</tbody>
+				</table>
+				<div class="text">
+					${data[i].desc}
 				</div>
+	        	<div class="quicklink clearfix">
+	        		<a href="${data[i].link1}" target="_blank"><i class="fa-solid fa-file-code"></i></i></i> 프로젝트 기술 문서</a>
+	        		<a href="${data[i].link2}" target="_blank"><i class="fa-solid fa-code-branch"></i> GitHub 바로가기</a>
+        		</div>				
 			</div>
-		</li>
+		</div>
+	</li>
 	`
 }
 const portfolio = document.querySelector(".portfolio")
