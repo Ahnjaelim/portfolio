@@ -39,7 +39,7 @@ let data = [
     },
     {
         title : "자바 샵",
-        subtitle : "카페 관리 웹어플리케이션",
+        subtitle : "쇼핑몰 웹어플리케이션",
         type : "개인 프로젝트",
         date : "2023.03 ~ 2023.03 (1주)",
         backend : `<span class='java'><i class='fa-solid fa-mug-hot'></i> Java</span>,
