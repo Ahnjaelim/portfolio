@@ -111,7 +111,14 @@ for(var i = 0; i<data.length; i++){
 					${data[i].desc}
 				</div>
 	        	<div class="quicklink clearfix">
-	        		<a onclick="alert('준비 중입니다.');"><i class="fa-solid fa-file-code"></i></i></i> 프로젝트 기술 문서</a>
+	`
+	if(data[i].link1=="" || data[i].link1=="#"){
+		str += `<a onclick="alert('준비 중입니다.');">`
+	}else {
+		str += `<a href="${data[i].link1}" target="_blank">`		
+	}
+	str += `
+	        		<i class="fa-solid fa-file-code"></i></i></i> 프로젝트 기술 문서</a>
 	        		<a href="${data[i].link2}" target="_blank"><i class="fa-solid fa-code-branch"></i> GitHub 바로가기</a>
         		</div>				
 			</div>
