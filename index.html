@@ -174,37 +174,39 @@ portfolio.innerHTML = str
 var windowHeight = window.innerHeight;
 $(".section.no01").css({"height":windowHeight+"px"});
 
-btnmove();
-
-
 function btnmove(){
 	const btn = $(".section.no01 .btn-down i");
 	btn.animate({"top":"60px"},1000, "easeOutQuint");
 	btn.animate({"top":"40px"},1000, "easeOutQuint", btnmove);
 }
 
-$(window).scroll(function(){
-	const scrollTop = $(document).scrollTop();
-	console.log(scrollTop);
-	if(scrollTop > 500){
-		$(".btn-top").fadeIn();
-		$(".btn-down").fadeOut();
-	}else{
-		$(".btn-top").fadeOut();
-		$(".btn-down").fadeIn();
-	}
-	if(scrollTop > 7150){
-		$(".btn-top").addClass("white", 500);
-	}else{
-		$(".btn-top").removeClass("white", 500);
-	}
+$(document).ready(function(){
+	btnmove();
+	$(window).scroll(function(){
+		const scrollTop = $(document).scrollTop();
+		console.log(scrollTop);
+		if(scrollTop > 500){
+			$(".btn-top").fadeIn();
+			$(".btn-down").fadeOut();
+		}else{
+			$(".btn-top").fadeOut();
+			$(".btn-down").fadeIn();
+		}
+		if(scrollTop > 7150){
+			$(".btn-top").addClass("white", 500);
+		}else{
+			$(".btn-top").removeClass("white", 500);
+		}
+	});
 });
+
 
 const btnTop = document.querySelector(".btn-top")
 btnTop.addEventListener("click", function(){
-	
 	$(document).scrollTop(0);
 }, false);
+
+
 </script>
 
 </body>
