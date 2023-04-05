@@ -2,56 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>안재림 웹개발자 포트폴리오</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <link href="fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/5efc80fbcc.js" crossorigin="anonymous"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="js/pofol.js"></script>
-<style>
-
-html, body, div, p, ul, ol, li, span, a, h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-family: 'Noto Sans KR', sans-serif; font-size:16px; font-weight: 300; list-style:none;}
-a:link {text-decoration:none;}
-a:active {text-decoration:none;}
-a:hover {text-decoration:none;}
-a:visited {text-decoration:none;}
-#mainvisual {min-height: 1500px; position:fixed; z-index:1; width: 100%; background:url("img/inc/bg.jpg") no-repeat center top;}
-.inner {width:1200px; margin:0px auto; text-align: center;}
-#mainvisual .inner {text-align: left;}
-#mainvisual .inner p {position: relative; left:-100px; top:120px;}
-.section {position: relative; z-index: 2; padding:80px 0px 80px 0px;}
-.section h2 {font-size: 3.5em; font-weight: 900; word-spacing: -1px; letter-spacing: -1px; text-align: center; padding:0px 0px 15px 0px;}
-.section.no01 {min-height: 1000px;}
-.section.no02 {min-height: 1000px; background: #dcdcdc;}
-.portfolio li {width:1200px; background:#ffffff; border-radius:8px; margin:60px 0px 0px 0px; padding:0px 0px 50px 0px;}
-.portfolio .img,
-.portfolio .desc {float:left;}
-.portfolio li h3 {font-size: 1.8em; font-weight: 900; word-spacing: -1px; letter-spacing: -1px; text-align: center; padding:50px 0px 10px 0px;}
-.portfolio .img {padding:0px 0px 0px 50px; width:550px; }
-.portfolio .img img {border:1px solid #dcdcdc;}
-.portfolio li .subtitle {padding:0px 0px 50px 0px;}
-.portfolio .desc {width:650px; text-align:left; padding:0px 50px 0px 50px;}
-table {border-top:1px solid #e6e6e6;}
-table thead th {text-align:center;}
-table th,
-table td {border-color:#e6e6e6;}
-.backend,
-.backend span {font-weight:bold;}
-.spring {color:#559b27;}
-.java {color:#407397;}
-.jpa {color:#5a676d;}
-.querydsl {color:#0078c8;}
-.text p {padding:0px 0px 15px 0px; line-height:1.7em;}
-.quicklink {padding:30px 0px 0px 0px; margin:0; width:100%; display:block;}
-.quicklink a {display:block; background:#d8ff00; width:49%; padding:25px 0px 25px 0px; float:left; font-weight:bold; color:#000000; border-radius: 8px; text-align:center;}
-.quicklink a:nth-child(1) {margin-right:2%;}
-.quicklink a:nth-child(2) {background:#dcdcdc;}
-</style>
 </head>
+
 <body>
+
+<div class="btn-top"><i class="fa-solid fa-chevron-up"></i></div>
 
 <div id="mainvisual">
 <div class="inner">
@@ -60,14 +27,90 @@ table td {border-color:#e6e6e6;}
 </div>
 
 <div class="section no01">
+<div class="inner">
+	<div class="btn-down"><i class="fa-solid fa-chevron-down"></i></div>
+</div>
+</div>
 
+<div class="section no03">
+<div class="inner">
+	<h2>TECH STACK</h2>
+	<p class="subtit">지원자의 기술스택입니다</p>
+	<div>
+		<dl class="clearfix">
+			<dt>BACKEND</dt>
+			<dd>
+				<p>
+					<span class="java">Java</span>
+					<span class="spring">Spring</span>
+					<span class="spring">Spring Boot</span>
+					<span>MyBatis</span>
+					<span>JPA</span>
+					<span>Querydsl</span>
+					<span>JSP</span>
+				</p>
+				<p>
+					<span><i class="fa-solid fa-database"></i> MySQL</span>
+					<span><i class="fa-solid fa-database"></i> MariaDB</span>
+				</p>
+			</dd>
+		</dl>
+		<dl class="clearfix">
+			<dt>FRONTEND</dt>
+			<dd>
+				<p>
+					<span>HTML/CSS</span>
+					<span>JavaScript(JQuery)</span>
+					<span>JSTL</span>
+					<span>Thymeleaf</span>
+					<span>Ajax</span>
+				</p>
+			</dd>
+		</dl>
+		<dl class="clearfix">
+			<dt>VERSION CONTROL</dt>
+			<dd>
+				<p>
+					<span>GitHub</span>
+				</p>
+			</dd>
+			<dt>IDE</dt>
+			<dd>
+				<p><span class="narrow">eclipse</span> <span class="narrow">Intelli J</span></p>
+			</dd>
+		</dl>			
+	</div>
+</div>
 </div>
 
 <div class="section no02">
 <div class="inner">
     <h2>PORTFOLIO</h2>
+    <p class="subtit">지원자의 포트폴리오입니다</p>
     <div class="portfolio">
     </div>
+</div>
+</div>
+
+
+<div class="section no04">
+<div class="inner">
+    <h2>CONTACT</h2>
+    <p class="subtit">지원자의 GitHub 및 연락처입니다</p>
+    <div>
+    	<ul class="clearfix">
+    		<li><a href="https://github.com/Ahnjaelim?tab=repositories" target="_blank"><i class="fa-solid fa-code-branch"></i> GitHub 바로가기</a></li>
+    		<li><a onclick="alert('준비 중입니다.')"><i class="fa-sharp fa-solid fa-blog"></i> 티스토리 바로가기</a></li>
+    		<li><a><i class="fa-solid fa-phone"></i> 010 4451 0515</a></li>
+    		<li><a><i class="fa-solid fa-envelope"></i> ahnjaelim@gmail.com</a></li>
+    	</ul>
+    </div>
+</div>
+</div>
+
+<div id="footer">
+<div class="inner">
+	Copyright ⓒ <strong>Ahn Jaelim</strong>
 </div>
 </div>
 
@@ -113,13 +156,13 @@ for(var i = 0; i<data.length; i++){
 	        	<div class="quicklink clearfix">
 	`
 	if(data[i].link1=="" || data[i].link1=="#"){
-		str += `<a onclick="alert('준비 중입니다.');">`
+		str += ``
 	}else {
-		str += `<a href="${data[i].link1}" target="_blank">`		
+		str += `<a href="${data[i].link1}" target="_blank" class="btn-doc"><i class="fa-solid fa-file-code"></i></i></i> 프로젝트 기술 문서</a>`		
 	}
 	str += `
-	        		<i class="fa-solid fa-file-code"></i></i></i> 프로젝트 기술 문서</a>
-	        		<a href="${data[i].link2}" target="_blank"><i class="fa-solid fa-code-branch"></i> GitHub 바로가기</a>
+	        		
+	        		<a href="${data[i].link2}" target="_blank" class="btn-git"><i class="fa-solid fa-code-branch"></i> GitHub 바로가기</a>
         		</div>				
 			</div>
 		</div>
@@ -128,6 +171,41 @@ for(var i = 0; i<data.length; i++){
 }
 const portfolio = document.querySelector(".portfolio")
 portfolio.innerHTML = str
+
+var windowHeight = window.innerHeight;
+$(".section.no01").css({"height":windowHeight+"px"});
+
+function btnmove(){
+	const btn = $(".section.no01 .btn-down i");
+	btn.animate({"top":"60px"},1000, "easeOutQuint");
+	btn.animate({"top":"40px"},1000, "easeOutQuint", btnmove);
+}
+
+btnmove();
+
+$(window).scroll(function(){
+	const scrollTop = $(document).scrollTop();
+	console.log(scrollTop);
+	if(scrollTop > 500){
+		$(".btn-top").fadeIn();
+		$(".btn-down").fadeOut();
+	}else{
+		$(".btn-top").fadeOut();
+		$(".btn-down").fadeIn();
+	}
+	if(scrollTop > 7150){
+		$(".btn-top").addClass("white", 500);
+	}else{
+		$(".btn-top").removeClass("white", 500);
+	}
+});
+
+
+const btnTop = document.querySelector(".btn-top")
+btnTop.addEventListener("click", function(){
+	$(document).scrollTop(0);
+}, false);
+
 
 </script>
 
